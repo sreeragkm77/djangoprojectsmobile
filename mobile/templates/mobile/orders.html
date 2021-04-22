@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{%extends 'mobile/base.html'%}
+{%block body_block%}
+
+
+
+
+
+<form action="" method="post" >
+    {%csrf_token%}
+    {{form.as_p}}
+    <input type="submit" value="add to cart">
+    <!--<a href="{% url 'cart' %}" class="btn btn-primary">add to cart</a>-->
+</form>
+
+
+
+{% endblock %}

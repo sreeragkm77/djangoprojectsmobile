@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .tb{
+      background-color:grey;
+      width:500px;
+      height:100px
+      }
+      .loginbutton{
+      position:relative;
+      top:70px;
+      left:200px;
+      width:100px;
+      background-color:green;
+      color:white;
+      border-style:hidden;
+
+      }
+      .container{
+      margin-top:50px;
+      margin-left:30%;
+      }
+      body{
+      background-color: rgba(191, 200, 204, 0.904);
+      }
+      h1{
+      position:relative;
+      top:10px;
+      left:150px;
+      }
+      .usr{
+      position:relative;
+      top:10px;
+      left:50px;
+      }
+      .pss{
+      position:relative;
+      top:10px;
+      left:100px;
+      }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>USER Login</h1>
+    <form action="" method="post" class="tb">
+        {%csrf_token%}
+    <table>
+    <tr>
+        <td><input class="usr" type="text" name="uname" placeholder="username"></td>
+        <td><input class="pss" type="text" name="pwd" placeholder="pwd"></td>
+
+
+    </tr>
+
+        <input class="loginbutton" type="submit" value="login">
+    </table>
+        </form>
+</div>
+
+
+</body>
+</html>
+

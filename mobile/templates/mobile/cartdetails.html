@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{%extends 'mobile/base.html'%}
+{%block body_block%}
+<h1>{{mobile.mobile_name}}</h1>
+
+<!--{{carts}}-->
+
+
+<div class="container">
+    <h1>Ordered products</h1>
+    <div class="row">
+        <div class="col-10">
+            {% for order in orders %}
+
+            <table class="table tbl">
+                <tr>
+                    <td><b>Product</b></td>
+                    <td><b>Address</b></td>
+                    <td><b>Price</b></td>
+                    <td><b>Status</b></td>
+                    <td><b>View Order</b></td>
+                    <td><b>Cancel Order</b></td>
+                    <td><b>Price</b></td>
+                    <td><b>Image</b></td>
+
+                </tr>
+
+
+                <tr>
+                    <td>{{order.product}}</td>
+                    <td>{{order.address}}</td>
+                    <td></td>
+                    <td>{{order.status}}</td>
+                    <td><a href="" class="btn btn-secondary">View</a></td>
+                    <td><a href="{%url 'orderdel' order.id %}" class="btn btn-danger">Cancel</a></td>
+                    <td>{{order.product.price}}</td>
+                    <td><img src="{{order.product.img.url}}" alt=""></td>
+                </tr>
+
+            </table>
+            {% endfor %}
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+{% endblock %}

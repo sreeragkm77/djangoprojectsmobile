@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{%extends 'mobile/base.html'%}
+{%block body_block%}
+
+<div class="container" id="dtl">
+    {% for order in orders %}
+
+
+    <div class="col-4"></div>
+    <div class="col-4">
+        {{order.product}}
+        {{order.address}}
+        {{order.status}}
+
+    </div>
+    {% endfor %}
+</div>
+
+
+{% endblock %}

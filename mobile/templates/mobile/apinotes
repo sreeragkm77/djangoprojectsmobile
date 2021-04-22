@@ -1,0 +1,12 @@
+#shop/brands
+   #get==>list all brands
+   #post=>create a new brand
+#shop/brand/edit/1
+    #get=>
+    #post=>
+#shop/brands/delete/1
+    #post=>delete brand with id
+#================mobiles===========
+#shop/mobiles
+     #get=>list all mobiles
+     #post=>creat new mobile
